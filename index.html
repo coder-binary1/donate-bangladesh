@@ -20,10 +20,10 @@
 </head>
 
 <body class="lexend-regular">
-    <header class="">
+    <header class="sticky top-0 z-10 bg-white bg-opacity-90">
         <nav class="bg-amber-50 pt-3 pb-5">
             <div class="navbar justify-between px-5 flex-col lg:flex-row">
-                <div class="">
+                <div id="blog">
                     <a class="btn w-24 bg-lime-400 text-xl">Blog</a>
                 </div>
                 <div class="space-x-3">
@@ -32,29 +32,29 @@
                 </div>
                 <div class="space-x-2 font-medium text-xl text-gray-600">
                     <img src="assets/coin.png" alt="">
-                    <p>5000</p>
+                    <p id="balance">5000</p>
                     <p>BDT</p>
                 </div>
 
             </div>
         </nav>
-        <div class="flex justify-center gap-5 mt-12">
+        <div class="flex justify-center gap-5 pt-10 pb-6">
             <a id="btn-donation" class="btn w-28 bg-lime-400 text-xl">Donation</a>
             <a id="btn-history" class="btn w-28 border-gray-300 bg-white text-gray-600 text-xl">History</a>
         </div>
     </header>
-    <main class="max-w-6xl mx-auto mt-10 ">
+    <main class="max-w-6xl mx-auto mt-6 ">
         <div id="donate-section" class="space-y-12">
             <!-- flood-1 -->
-            <div class="card lg:card-side bg-base-100 shadow-sm p-8 border border-gray-100">
+            <div class="card lg:card-side bg-base-100 shadow-sm p-8 border border-gray-100 gap-3 lg:gap-0">
                 <figure class="flex-1">
                     <img src="assets/noakhali.png" alt="" />
                 </figure>
-                <div class="card-body flex-1 flex justify-between py-0">
+                <div class="card-body flex-1 flex justify-between py-0 px-0 lg:px-8">
                     <div class="space-y-3">
                         <div class="btn text-gray-600 text-lg">
                             <img src="assets/coin.png" alt="">
-                            <p>320</p>
+                            <p id="noa-total-donation">300</p>
                             <p>BDT</p>
                         </div>
                         <h2 class=" card-title">Donate for Flood at Noakhali, Bangladesh</h2>
@@ -71,22 +71,24 @@
                             impact on the lives of those in need.</p>
                     </div>
                     <div class="card-actions">
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                        <button class="btn bg-lime-400 w-full text-xl" onclick="my_modal_5.showModal()">Donate
+                        <input id="input-noa" type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full" />
+                        <button id="donate-noakhali" class="btn bg-lime-400 w-full text-xl"
+                            onclick="my_modal_5.showModal()">Donate
                             Now</button>
                     </div>
                 </div>
             </div>
             <!-- flood-2 -->
-            <div class="card lg:card-side bg-base-100 shadow-sm p-8 border border-gray-100">
+            <div class="card lg:card-side bg-base-100 shadow-sm p-8 border border-gray-100 gap-3 lg:gap-0">
                 <figure class="flex-1">
                     <img src="assets/feni.png" alt="" />
                 </figure>
-                <div class="card-body flex-1 flex justify-between py-0">
+                <div class="card-body flex-1 flex justify-between py-0 px-0 lg:px-8">
                     <div class="space-y-3">
                         <div class="btn text-gray-600 text-lg">
                             <img src="assets/coin.png" alt="">
-                            <p>450</p>
+                            <p id="feni-total-donation">450</p>
                             <p>BDT</p>
                         </div>
                         <h2 class=" card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
@@ -101,22 +103,24 @@
                             today to assist those in urgent need.</p>
                     </div>
                     <div class="card-actions">
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                        <button class="btn bg-lime-400 w-full text-xl" onclick="my_modal_5.showModal()">Donate
+                        <input id="input-feni" type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full" />
+                        <button id="donate-feni" class="btn bg-lime-400 w-full text-xl"
+                            onclick="my_modal_5.showModal()">Donate
                             Now</button>
                     </div>
                 </div>
             </div>
             <!-- flood-3 -->
-            <div class="card lg:card-side bg-base-100 shadow-sm p-8 border border-gray-100">
+            <div class="card lg:card-side bg-base-100 shadow-sm p-8 border border-gray-100 gap-3 lg:gap-0">
                 <figure class="flex-1">
                     <img src="assets/quota-protest.png" alt="" />
                 </figure>
-                <div class="card-body flex-1 flex justify-between py-0">
+                <div class="card-body flex-1 flex justify-between py-0 px-0 lg:px-8">
                     <div class="space-y-3">
                         <div class="btn text-gray-600 text-lg">
                             <img src="assets/coin.png" alt="">
-                            <p>100</p>
+                            <p id="quota-total-donation">100</p>
                             <p>BDT</p>
                         </div>
                         <h2 class=" card-title">Aid for Injured in the Quota Movement</h2>
@@ -133,8 +137,10 @@
                             time of need.</p>
                     </div>
                     <div class="card-actions">
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                        <button class="btn bg-lime-400 w-full text-xl" onclick="my_modal_5.showModal()">Donate
+                        <input id="input-quota" type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full" />
+                        <button id="donate-quota" class="btn bg-lime-400 w-full text-xl"
+                            onclick="my_modal_5.showModal()">Donate
                             Now</button>
 
                     </div>
@@ -145,11 +151,13 @@
         <div>
             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                 <div class="modal-box flex flex-col items-center gap-5">
-                    <h3 class="text-5xl font-bold">Congrates!</h3>
-                    <div><img src="assets/coin.png" alt=""></div>
+                    <h3 id="donate-status" class="text-5xl font-bold"></h3>
+                    <div class="flex items-center gap-2"><img src="assets/coin.png" alt="">
+                        <p id="donate-amount-modal" class="font-bold text-3xl text-yellow-500"></p>
+                    </div>
                     <p>You Have Donated For Humankind</p>
-                    <h4 class="text-2xl font-bold">Successfully</h4>
-                    <div class="modal-action">
+                    <h4 id="success" class="text-2xl font-bold">Successfully</h4>
+                    <div id="btn-close" class="modal-action">
                         <form method="dialog">
                             <button class="btn">Close Confirmation</button>
                         </form>
@@ -158,14 +166,20 @@
             </dialog>
         </div>
         <!-- history section -->
-        <div id="transaction-history" class="hidden">
+        <div id="transaction-history" class="hidden mx-5 lg:mx-0">
             <h2 class="text-center text-3xl">Donation History</h2>
+            <div id="history" class="mt-8 space-y-5 "></div>
         </div>
     </main>
     <footer class="bg-amber-50 py-24 mt-20">
     </footer>
 
-    <script src="js/donate.js"></script>
+    <script src="js/swap.js"></script>
+    <script src="js/donation.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/update.js"></script>
+    <script src="js/updateHistory.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>
