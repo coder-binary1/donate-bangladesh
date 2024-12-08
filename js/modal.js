@@ -6,6 +6,8 @@ function successAlert(amount) {
     .getElementById("donate-amount-modal")
     .parentNode.classList.remove("hidden");
   document.getElementById("success").classList.remove("hidden");
+  document.getElementById("donate-status-p").innerText =
+    "Your Donation Makes a Difference for Humanity";
 }
 
 function failedAlert() {
@@ -15,4 +17,6 @@ function failedAlert() {
     .getElementById("donate-amount-modal")
     .parentNode.classList.add("hidden");
   document.getElementById("success").classList.add("hidden");
+  document.getElementById("donate-status-p").innerText =
+    "Your donation has failed";
 }

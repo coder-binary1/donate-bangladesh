@@ -2,7 +2,7 @@ document
   .getElementById("donate-noakhali")
   .addEventListener("click", function () {
     const donateAmount = parseFloat(document.getElementById("input-noa").value);
-    const address = "Famine-2024 at Feni, Bangladesh";
+    const address = "Flood Relief at Noakhali, Bangladesh";
     const totalDonation = document.getElementById("noa-total-donation");
 
     document.getElementById("input-noa").value = "";
@@ -10,7 +10,7 @@ document
   });
 document.getElementById("donate-feni").addEventListener("click", function () {
   const donateAmount = parseFloat(document.getElementById("input-feni").value);
-  const address = "Flood Relief in Feni,Bangladesh";
+  const address = "Feni Flood Victims";
   const totalDonation = document.getElementById("feni-total-donation");
 
   validate(donateAmount, address, totalDonation);
@@ -18,7 +18,7 @@ document.getElementById("donate-feni").addEventListener("click", function () {
 });
 document.getElementById("donate-quota").addEventListener("click", function () {
   const donateAmount = parseFloat(document.getElementById("input-quota").value);
-  const address = "Aid for Injured in the Quota Movement, Bangladesh";
+  const address = "the Injured in the Quota Movement";
   const totalDonation = document.getElementById("quota-total-donation");
 
   validate(donateAmount, address, totalDonation);
